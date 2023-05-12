@@ -1,4 +1,24 @@
 //const { event } = require("jquery");
+// Находим все ссылки на странице
+const linksA = document.querySelectorAll('a');
+
+// Проходим по каждой ссылке
+linksA.forEach(link => {
+  // Получаем значение атрибута href
+  let href = link.getAttribute('href');
+
+  // Проверяем, что href не содержит символ #
+  if (href && !href.includes('#')) {
+    // Проверяем, что href содержит .html и начинается с /
+    if (href.includes('.html') && href.startsWith('/')) {
+      // Заменяем начало href на suip
+      href = `suip${href}`;
+
+      // Устанавливаем новое значение атрибута href
+      link.setAttribute('href', href);
+    }
+  }
+});
 
 //orbit
 const block = document.querySelectorAll('.main-block__block3 label')
