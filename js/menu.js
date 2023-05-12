@@ -1,5 +1,27 @@
 //const { event } = require("jquery");
+// задаем обработчик события "beforeunload", который срабатывает перед выгрузкой страницы
+window.addEventListener("beforeunload", () => {
+  // получаем текущий адрес страницы
+  const currentUrl = window.location.href;
+  // добавляем в начало пути "/suip"
+  const newUrl = currentUrl.replace(/^https?:\/\/[^/]+/, "$&/suip");
+  // обновляем адрес страницы
+  window.location.href = newUrl;
+});
 
+// задаем обработчик события "click" для всех ссылок на странице
+document.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    // отменяем стандартное действие браузера по переходу по ссылке
+    event.preventDefault();
+    // получаем адрес, на который ссылается ссылка
+    const href = link.getAttribute("href");
+    // добавляем в начало пути "/suip"
+    const newHref = href.replace(/^https?:\/\/[^/]+/, "$&/suip");
+    // переходим по новому адресу
+    window.location.href = newHref;
+  });
+});
 //orbit
 const block = document.querySelectorAll('.main-block__block3 label')
 const main = block[2]
