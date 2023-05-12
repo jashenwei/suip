@@ -9126,22 +9126,22 @@ footer .footer .footer-main .footer-main__blocks2 .footer-info .dev {
 
 @font-face {
   font-family: "gilroy-regular";
-  src: url("/fonts/gilroy-regular.ttf");
+  src: url("../fonts/gilroy-regular.ttf");
 }
 
 @font-face {
   font-family: "gilroy-bold";
-  src: url("/fonts/gilroy-bold.ttf");
+  src: url("../fonts/gilroy-bold.ttf");
 }
 
 @font-face {
   font-family: "gilroy-semibold";
-  src: url("/fonts/gilroy-semibold.ttf");
+  src: url("../fonts/gilroy-semibold.ttf");
 }
 
 @font-face {
   font-family: "gilroy-medium";
-  src: url("/fonts/gilroy-medium.ttf");
+  src: url("../fonts/gilroy-medium.ttf");
 }
 
 body {
