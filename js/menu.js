@@ -12,7 +12,7 @@ linksA.forEach(link => {
     // Проверяем, что href содержит .html и начинается с /
     if (href.includes('.html') && href.startsWith('/')) {
       // Заменяем начало href на suip
-      href = `suip${href}`;
+      href = `.${href}`;
 
       // Устанавливаем новое значение атрибута href
       link.setAttribute('href', href);
@@ -397,9 +397,9 @@ function handleFileUpload(input) {
   spanElement.forEach(s => {
     s.textContent = fileName;
     const label = input.nextElementSibling;
-   
-      label.style.display = "none";
-    
+
+    label.style.display = "none";
+
   })
 
 }
@@ -586,8 +586,8 @@ let calendar = new Vue({
     console.log(this.$refs.calendar)
   }
 })
- const select = document.querySelector('select');
- select.onchange = () => {
-   tabs.querySelector('.active').classList.remove('active');
-   tabs.querySelectorAll('.tab')[select.a.selectedIndex].classList.add('active');
- }
+const select = document.querySelector('select');
+select.onchange = () => {
+  tabs.querySelector('.active').classList.remove('active');
+  tabs.querySelectorAll('.tab')[select.a.selectedIndex].classList.add('active');
+}
